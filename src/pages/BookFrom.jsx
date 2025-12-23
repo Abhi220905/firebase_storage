@@ -161,13 +161,6 @@ function BookForm() {
 
                 <div className="d-flex justify-content-end gap-2">
                   <button
-                    type="button"
-                    className="btn btn-outline-secondary px-4"
-                    onClick={() => reset()}
-                  >
-                    Reset
-                  </button>
-                  <button
                     type="submit"
                     className="btn px-4 text-white"
                     style={{
@@ -176,6 +169,13 @@ function BookForm() {
                   >
                     {id ? "Update Book" : "Add Book"}
                   </button>
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary px-4"
+                      onClick={() => reset()}
+                    >
+                      Reset
+                    </button>
                 </div>
               </form>
             </div>

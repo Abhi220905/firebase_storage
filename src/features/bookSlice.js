@@ -2,11 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { db } from "../../firebase";
 import { collection, addDoc, getDocs, deleteDoc, doc, updateDoc } from "firebase/firestore";
 
-const userId = localStorage.getItem("userId");
 
 
 export const addBook = createAsyncThunk("books/add", async (data) => {
   try {
+    const userId = localStorage.getItem("userId");
     const newData = { userId, ...data };
     const res = await addDoc(collection(db, "books"), newData);
 

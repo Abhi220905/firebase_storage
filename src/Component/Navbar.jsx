@@ -18,6 +18,7 @@ function Navbar() {
     signInWithPopup(auth, provider)
       .then((result) => {
         alert("Signed in successfully!");
+        localStorage.setItem("userId", result.user.uid);
         setAuth(result.user);
         setUserData(result.user);
       })
@@ -79,7 +80,7 @@ function Navbar() {
                     : ""
                 }`}
               >
-                 Books
+                Books
               </Link>
             </li>
 
@@ -92,7 +93,7 @@ function Navbar() {
                     : ""
                 }`}
               >
-                 Add Book
+                Add Book
               </Link>
             </li>
 
